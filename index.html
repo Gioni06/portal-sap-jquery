@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Oygo Dev Portal</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    </head>
+    <body>
+
+
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h4 class="ui black header">
+                <div class="content">
+                    Enter your E-Mail to get WiFi access.
+                </div>
+            </h4>
+            <form class="ui form">
+                <div class="ui very padded segment">
+                    <p>Welcome to the OYGO Dev demo portal</p>
+                    <div class="field">
+                        <div class="ui left checkbox">
+                            <input type="checkbox" tabindex="0">
+                            <label>I agree to the Terms and Conditions</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="email" placeholder="E-mail address" tabindex="1">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="Password" tabindex="2">
+                        </div>
+                    </div>
+                    <button id="emailLoginFormButton" class="ui fluid large black submit button" tabindex="0">send</button>
+                </div>
+
+                <div class="ui error message"></div>
+
+            </form>
+
+            <div class="ui info message">
+                <p>
+                    Do you already have an account?
+                    <button class="ui basic grey tiny compact button">
+                        Log-In
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+        <script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

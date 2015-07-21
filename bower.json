@@ -1,0 +1,17 @@
+{
+  "name": "portal-sap",
+  "version": "0.0.1",
+  "authors": [
+    "Gioni06 <jd@oygo.com>"
+  ],
+  "description": "portal-sap",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
