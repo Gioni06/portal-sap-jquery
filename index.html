@@ -9,27 +9,46 @@
 
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="bower_components/semantic-ui/dist/semantic.css">
+        <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
     </head>
     <body>
 
+        <div class="ui container main-menu">
+        <div class="ui menu small fixed">
+            <div class="item">
+                <img src="img/logo.png">
+            </div>
+            <a class="item termsAndConditions">
+                <i class="file text outline icon"></i> Terms & Conditions
+            </a>
+            <div class="menu small right">
+                <div class="ui dropdown item">
+                    <i class="world icon"></i>Language <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a class="item"><i class="united states flag"></i>English</a>
+                        <a class="item"><i class="germany flag"></i>Deutsch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <div class="ui middle aligned center aligned grid">
+        <div class="ui middle aligned center aligned grid _mainWrapper">
         <div class="column">
             <h4 class="ui black header">
                 <div class="content">
-                    Enter your E-Mail to get WiFi access.
+                    Welcome to the OYGO Dev demo portal
                 </div>
             </h4>
+            <p>Enter your E-Mail to get WiFi access.</p>
             <form class="ui form">
                 <div class="ui very padded segment">
-                    <p>Welcome to the OYGO Dev demo portal</p>
                     <div class="field">
-                        <div class="ui left checkbox">
-                            <input type="checkbox" tabindex="0">
+                        <div class="ui aligned left checkbox">
+                            <input id="termsAndConditions" type="checkbox" tabindex="0">
                             <label>I agree to the Terms and Conditions</label>
                         </div>
                     </div>
@@ -63,8 +82,39 @@
         </div>
     </div>
 
+        <div class="ui modal terms">
+            <i class="close icon"></i>
+            <div class="header">
+                Terms & conditions
+            </div>
+            <div class="content">
+                <div class="description">
+                    <div class="ui header">Terms & conditions</div>
+                    <ul>
+                        <li>Die QSC AG, Mathias-Brüggen-Str. 55, 50829 Köln stellt Ihnen ausschließlich zu Testzwecken einen kostenlosen WLAN-Internetzugang zur Verfügung. Durch Verwendung des Zugangs erkennen Sie die folgenden Nutzungsbedingungen an. Zuwiderhandlungen führen zum Ausschluss von der Nutzung des WLAN-Internetzugang.</li>
+                        <li>Der Internetzugang wird über ein drahtloses Netzwerk („WLAN“) zur Verfügung gestellt. Zu Beginn der Nutzung müssen Sie sich an einem Startportal anmelden. Das von Ihnen verwendete Gerät muss diese Anmeldung unterstützen.</li>
+                        <li>Sollten Sie für den Zugang zum Internet eine Zugangskennung (E-Mail oder SMS Double opt-in) verwenden, so ist die Ihnen erteilte Zugangskennung geheim zu halten und darf nicht an andere Personen weitergegeben werden. Sie darf nur für die Dauer Ihrer Anwesenheit genutzt werden.</li>
+                        <li>Wir weisen ausdrücklich darauf hin, dass Sie allein dafür verantwortlich sind, die allgemein üblichen Sicherheitsmaßnahmen durchzuführen, um das von Ihnen benutzte Gerät und die auf ihm enthaltenen Daten und Dateien vor einer Beschädigung oder missbräuchlichen Nutzung durch Dritte oder einem Zugriff Dritter zu sichern (z.B. Firewall, Virenscanner). Eine Haftung der QSC AG ist insoweit ausgeschlossen. Bitte beachten Sie, dass das von der QSC AG zur Verfügung gestellte WLAN selbst offen und unverschlüsselt ist. Somit können Dritte Ihren Datenverkehr mitlesen, auf Ihr Gerät zugreifen, wenn Ihr Gerät nicht gegen einen Zugriff Dritter gesichert ist.</li>
+                        <li>Sie sind zur Einhaltung der gesetzlichen Vorgaben, insb. von Urheberrechten und sonstigen Rechten Dritter verpflichtet und stellen die QSC AG insoweit von jeder Haftung frei.</li>
+                        <li>Für die Verfügbarkeit des Internetzugangs übernimmt die QSC AG keine Garantie. Ein drahtloses Netzwerk kann Störungen unterliegen, auf die die QSC AG keinen Einfluss hat. Im Rahmen dieser technischen Grenzen wird der Dienst so gut wie möglich erbracht („best effort“).</li>
+                        <li>Die Nutzung des Internetzugangs ist ausschließlich volljährigen Personen gestattet. Die QSC AG ist nicht für Inhalte, Virenfreiheit und Qualität von aufgerufenen Seiten verantwortlich. Der Aufruf und die Verbreitung von Seiten mit extremistischen, strafbaren, Gewalt verherrlichenden, jugendgefährdenden oder pornographischen Inhalten sind nicht gestattet. Die QSC AG behält sich vor, technische Filtermechanismen einzusetzen, die Zugriffe auf bestimmte Seiten unterbinden.</li>
+                        <li>Sollten Sie Ihre E-Mailadresse, optional Name und Firmennamen, in dem angebotenen Dialogfeld zur Kontaktaufnahme eintragen wird die QSC AG Ihnen einmalig eine Begrüßungsmail zusenden.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="actions">
+                <div class="ui black deny button">
+                    cancel
+                </div>
+                <div class="ui positive button acceptTermsAndConditionsButton">
+                    ok
+                </div>
+            </div>
+        </div>
+
         <script src="bower_components/semantic-ui/dist/semantic.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/ui.js"></script>
     </body>
 </html>

@@ -117,8 +117,27 @@ body > .grid {
     margin-right: 1rem!important;
 }
 
+.ui.main-menu{
+    width: 100%!important;
+}
 
+.ui.menu {
+    border: none!important;
+    border-radius: 0!important;
+}
 
+.ui.checkbox{
+    text-align: left;
+}
+
+.ui.container {
+    margin-left: 0em !important;
+    margin-right: 0em !important;
+}
+
+._mainWrapper{
+    margin-top: 80px;
+}
 
 
 
