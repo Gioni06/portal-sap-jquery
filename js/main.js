@@ -2,6 +2,11 @@
  * Demo Portal with SAP integration
  */
 
+var endpoints = {
+    wifiSet: 'https://omnidemo-s0006946433trial.dispatcher.hanatrial.ondemand.com/sap/opu/odata/sap/zomnichannel_srv/WifiSet',
+    wifiSetPrev: 'https://lab-demo.qsc.de/sap/opu/odata/sap/zomnichannel_srv/WifiSet'
+};
+
 $(document).ready(function(){
 
     $('#emailLoginFormButton').on('click',function(e){
@@ -28,7 +33,7 @@ $(document).ready(function(){
         });
 
         $.ajax({
-            url: 'https://lab-demo.qsc.de/sap/opu/odata/sap/zomnichannel_srv/WifiSet?$format=json',
+            url: endpoints.wifiSet + '?$format=json',
             type: 'GET',
             success: function(data){
                 console.log(data);
