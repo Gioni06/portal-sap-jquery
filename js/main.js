@@ -19,18 +19,19 @@ $(document).ready(function(){
                 xhr.setRequestHeader("Authorization", "Basic" + credentials);
                 xhr.setRequestHeader("X-CSRF-Token", "Fetch");
                 return true;
+            },
+            dataType: 'jsonp',
+            crossDomain: true,
+            dataFilter: function (data, dataType) {
+                return console.log(typeof (data));
             }
         });
 
         $.ajax({
             url: 'https://lab-demo.qsc.de/sap/opu/odata/sap/zomnichannel_srv/WifiSet?$format=json',
-            dataType: 'jsonp',
             type: 'GET',
             success: function(data){
                 console.log(data);
-            },
-            error: function(error){
-                console.warn(error);
             }
         });
 
