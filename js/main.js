@@ -18,6 +18,7 @@ $(document).ready(function(){
             password: "SommerinHamburg2000"
         };
         var credentials = btoa(creds.username + ":" + creds.password);
+
         $.ajaxSetup({
             xhrFields: { withCredentials: false },
             beforeSend: function (xhr) {
@@ -25,11 +26,8 @@ $(document).ready(function(){
                 xhr.setRequestHeader("X-CSRF-Token", "Fetch");
                 return true;
             },
-            dataType: 'jsonp',
-            crossDomain: true,
-            dataFilter: function (data, dataType) {
-                return console.log(typeof (data));
-            }
+            dataType: 'json',
+            crossDomain: true
         });
 
         $.ajax({
