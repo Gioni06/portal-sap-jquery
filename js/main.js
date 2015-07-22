@@ -20,9 +20,9 @@ $(document).ready(function(){
         var credentials = btoa(creds.username + ":" + creds.password);
 
         $.ajaxSetup({
-            xhrFields: { withCredentials: false },
+            //xhrFields: { withCredentials: true },
             beforeSend: function (xhr) {
-                xhr.setRequestHeader("Authorization", "Basic" + credentials);
+                // xhr.setRequestHeader("Authorization", "Basic" + credentials);
                 xhr.setRequestHeader("X-CSRF-Token", "Fetch");
                 return true;
             },
@@ -31,7 +31,7 @@ $(document).ready(function(){
         });
 
         $.ajax({
-            url: endpoints.wifiSet + '?$format=json',
+            url: endpoints.wifiSetPrev + '?$format=json',
             type: 'GET',
             success: function(data){
                 console.log(data);
